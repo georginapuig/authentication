@@ -5,9 +5,15 @@
 // npm install express-session --save
 // npm install ejs --save
 
-const express = require('express');
+const express               = require('express'),
+      mongoose              = require('mongoose'),
+      passport              = require('passport'),
+      bodyParser            = require('body-parser'),
+      User                  = require('./models/user'),
+      LocalStrategy         = require('passport-local'),
+      passportLocalMongoose = require('passport-local-mongoose');
 const app = express();
-const mongoose = require('mongoose');
+const PORT = 3000;
 
 // mongoose setup
 mongoose.connect('mongodb://localhost:27017/yelp_camp', {
@@ -27,6 +33,7 @@ app.get('/secret', function(req, res) {
   res.render('secret');
 });
 
-app.listen(process.env.PORT || 3000, process.env.IP, function() {
-  console.log('server has started');
+app.listen(process.env.PORT || PORT, process.env.IP, function() {
+  console.log(`the server has started in port ${PORT}`);
+  console.log(`http://localhost:${PORT}`);
 });
