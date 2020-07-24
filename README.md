@@ -3,20 +3,20 @@
 ## Intro to Auth
 
 What tools are we using?
-- [ ] Passport
-- [ ] Passport Local
-- [ ] Passport Local Mongoose
+- [x] Passport
+- [x] Passport Local
+- [x] Passport Local Mongoose
 
 Walk through auth flow
 Discuss sessions
-- [ ] Express-Session
+- [x] Express-Session
 
 ## Auth CodeAlong Part 1
 
-- [ ] Set up folder structure
-- [ ] Install needed packages
-- [ ] Add root route and template
-- [ ] Add secret route and template
+- [x] Set up folder structure
+- [x] Install needed packages
+- [x] Add root route and template
+- [x] Add secret route and template
 
 ## Auth CodeAlong Part 2
 
