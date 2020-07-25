@@ -20,8 +20,8 @@ Discuss sessions
 
 ## Auth CodeAlong Part 2
 
-- [ ] Create User model
-- [ ] Configure passport
+- [x] Create User model
+- [x] C
 
 ## Auth CodeAlong Part 3
 
