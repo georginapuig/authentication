@@ -48,6 +48,13 @@ app.get('/secret', function(req, res) {
   res.render('secret');
 });
 
+// auth routes
+
+// show sign up form
+app.get('/register', function(req, res) {
+  res.render('register');
+});
+
 app.listen(process.env.PORT || PORT, process.env.IP, function() {
   console.log(`the server has started in port ${PORT}`);
   console.log(`http://localhost:${PORT}`);
