@@ -48,11 +48,16 @@ app.get('/secret', function(req, res) {
   res.render('secret');
 });
 
-// auth routes
+// AUTH ROUTES
 
 // show sign up form
 app.get('/register', function(req, res) {
   res.render('register');
+});
+
+// handling user sign up
+app.post('/register', function(req, res) {
+  res.send('register post route');
 });
 
 app.listen(process.env.PORT || PORT, process.env.IP, function() {
