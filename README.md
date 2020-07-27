@@ -30,8 +30,8 @@ Discuss sessions
 
 ## Auth CodeAlong Part 4
 
-- [ ] Add Login routes
-- [ ] Add Login form
+- [x] Add Login routes
+- [x] Add Login form
 
 ## Auth CodeAlong Part 5
 
