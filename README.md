@@ -21,12 +21,12 @@ Discuss sessions
 ## Auth CodeAlong Part 2
 
 - [x] Create User model
-- [x] C
+- [x] Configure passport
 
 ## Auth CodeAlong Part 3
 
-- [ ] Add Register routes
-- [ ] Add Register form
+- [x] Add Register routes
+- [x] Add Register form
 
 ## Auth CodeAlong Part 4
 
