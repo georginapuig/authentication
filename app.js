@@ -25,6 +25,7 @@ mongoose.connect('mongodb://localhost:27017/yelp_camp', {
 
 app.set('view engine', 'ejs');
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(require("express-session")({
   secret: "Rusty is the best and cutest dog in the world",
   resave: false,
@@ -57,7 +58,19 @@ app.get('/register', function(req, res) {
 
 // handling user sign up
 app.post('/register', function(req, res) {
-  res.send('register post route');
+  req.body.username;
+  req.body.password;
+  console.log(req.body.password);
+  User.register(new User({username: req.body.username}), req.body.password, function(err, user) {
+    if (err) {
+      console.log(err);
+      return res.render('register');
+    } else {
+      passport.authenticate('local')(req, res, function() {
+        res.redirect('/secret');
+      });
+    }
+  });
 });
 
 app.listen(process.env.PORT || PORT, process.env.IP, function() {
