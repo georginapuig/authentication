@@ -46,11 +46,15 @@ app.get('/', function(req, res) {
   res.render('home');
 });
 
-app.get('/secret', function(req, res) {
+app.get('/secret', isLoggedIn, function(req, res) {
   res.render('secret');
 });
 
+//============
 // AUTH ROUTES
+//============
+
+// REGISTER ROUTES
 
 // show sign up form
 app.get('/register', function(req, res) {
@@ -82,12 +86,21 @@ app.get('/login', function(req, res) {
 });
 
 // login logic
-app.post('login', passport.authenticate('local', {
+// middleware. passport.authenticate
+app.post('/login', passport.authenticate('local', {
   successRedirect: '/secret',
   failureRedirect: '/login'
 }), function(req, res) {
 
 });
+
+// LOGOUT ROUTES
+
+app.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/');
+});
+
 
 app.listen(process.env.PORT || PORT, process.env.IP, function() {
   console.log(`the server has started in port ${PORT}`);
