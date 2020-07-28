@@ -63,9 +63,9 @@ app.get('/register', function(req, res) {
 
 // handling user sign up
 app.post('/register', function(req, res) {
-  req.body.username;
-  req.body.password;
+  console.log(req.body.username);
   console.log(req.body.password);
+  
   User.register(new User({username: req.body.username}), req.body.password, function(err, user) {
     if (err) {
       console.log(err);
@@ -94,8 +94,7 @@ app.post('/login', passport.authenticate('local', {
 
 });
 
-// LOGOUT ROUTES
-
+// LOGOUT ROUTE
 app.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/');
