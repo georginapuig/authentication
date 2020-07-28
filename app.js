@@ -101,6 +101,13 @@ app.get('/logout', function(req, res) {
   res.redirect('/');
 });
 
+// MIDDLEWARE
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect('/login');
+}
 
 app.listen(process.env.PORT || PORT, process.env.IP, function() {
   console.log(`the server has started in port ${PORT}`);
