@@ -35,6 +35,6 @@ Discuss sessions
 
 ## Auth CodeAlong Part 5
 
-- [ ] Add Logout Route
-- [ ] Add isLoggedIn middleware
+- [x] Add Logout Route
+- [x] Add isLoggedIn middleware
 
