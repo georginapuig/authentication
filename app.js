@@ -24,7 +24,7 @@ mongoose.connect('mongodb://localhost:27017/yelp_camp', {
   .catch(error => console.log(error.message));
 
 app.set('view engine', 'ejs');
-
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(require("express-session")({
   secret: "Rusty is the best and cutest dog in the world",
